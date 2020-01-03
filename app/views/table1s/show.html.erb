@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @table1.name %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @table1.date %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @table1.address %>
+</p>
+
+<p>
+  <strong>Postcode:</strong>
+  <%= @table1.postcode %>
+</p>
+
+<%= link_to 'Edit', edit_table1_path(@table1) %> |
+<%= link_to 'Back', table1s_path %>
