@@ -1,0 +1,2 @@
+class Royalpass < ApplicationRecord
+end

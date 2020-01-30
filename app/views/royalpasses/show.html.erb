@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<h><strong><%= @royalpass.name %></strong></h>
+
+<p>
+  <strong>RP:</strong>
+  <%= @royalpass.rp %>
+</p>
+
+<p>
+  <strong>Points:</strong>
+  <%= @royalpass.pts %>
+</p>
+
+<p>
+  <strong>Rank in Clan:</strong>
+  <%= @royalpass.rnk %>
+</p>
+ <% if current_user.role == "admin" %>
+<%= link_to 'Edit', edit_royalpass_path(@royalpass) %> |
+<%end %>
+<%= link_to 'Back', royalpasses_path %>

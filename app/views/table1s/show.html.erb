@@ -1,24 +1,30 @@
 <p id="notice"><%= notice %></p>
 
+  <h><strong><%= @table1.name %></strong></h>
+
 <p>
-  <strong>Name:</strong>
-  <%= @table1.name %>
+  <strong>Matches:</strong>
+  <%= @table1.matches %>
 </p>
 
 <p>
-  <strong>Date:</strong>
-  <%= @table1.date %>
-</p>
-
-<p>
-  <strong>Address:</strong>
+  <strong>Current Tier:</strong>
   <%= @table1.address %>
 </p>
 
 <p>
-  <strong>Postcode:</strong>
-  <%= @table1.postcode %>
+  <strong>K/D:</strong>
+  <%= @table1.kd %>
 </p>
-
+<p>
+  <strong>Headshot:</strong>
+  <%= @table1.hd %>
+</p>
+<p>
+  <strong>Kills:</strong>
+  <%= @table1.die %>
+</p>
+ <% if current_user.role == "admin" %>
 <%= link_to 'Edit', edit_table1_path(@table1) %> |
+<%end%>
 <%= link_to 'Back', table1s_path %>

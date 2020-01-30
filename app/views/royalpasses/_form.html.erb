@@ -1,0 +1,37 @@
+<%= form_with(model: royalpass, local: true) do |form| %>
+  <% if royalpass.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(royalpass.errors.count, "error") %> prohibited this royalpass from being saved:</h2>
+
+      <ul>
+        <% royalpass.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :royalpass %>
+    <%= form.text_field :rp %>
+  </div>
+
+  <div class="field">
+    <%= form.label :points %>
+    <%= form.text_field :pts %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rnkclan %>
+    <%= form.text_field :rnk %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

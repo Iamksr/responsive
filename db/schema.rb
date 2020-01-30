@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_03_133005) do
+ActiveRecord::Schema.define(version: 2020_01_30_120401) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "royalpasses", force: :cascade do |t|
+    t.string "name"
+    t.string "rp"
+    t.string "pts"
+    t.string "rnk"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "table1s", force: :cascade do |t|
     t.string "name"
@@ -22,6 +31,10 @@ ActiveRecord::Schema.define(version: 2020_01_03_133005) do
     t.integer "postcode"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "matches"
+    t.string "kd"
+    t.string "hd"
+    t.string "die"
   end
 
   create_table "users", force: :cascade do |t|
@@ -32,6 +45,7 @@ ActiveRecord::Schema.define(version: 2020_01_03_133005) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "role"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

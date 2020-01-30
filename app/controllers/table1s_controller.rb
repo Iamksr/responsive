@@ -20,7 +20,8 @@ class Table1sController < ApplicationController
   # GET /table1s/1/edit
   def edit
   end
-
+ def about
+end
   # POST /table1s
   # POST /table1s.json
   def create
@@ -28,7 +29,7 @@ class Table1sController < ApplicationController
 
     respond_to do |format|
       if @table1.save
-        format.html { redirect_to @table1, notice: 'Table1 was successfully created.' }
+        format.html { redirect_to @table1}
         format.json { render :show, status: :created, location: @table1 }
       else
         format.html { render :new }
@@ -69,6 +70,6 @@ class Table1sController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def table1_params
-      params.require(:table1).permit(:name, :date, :address, :postcode)
+      params.require(:table1).permit(:name, :date, :address, :postcode, :matches, :kd, :hd, :die)
     end
 end

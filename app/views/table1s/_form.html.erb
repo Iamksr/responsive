@@ -16,20 +16,33 @@
     <%= form.text_field :name %>
   </div>
 
-  <div class="field">
-    <%= form.label :date %>
-    <%= form.datetime_select :date %>
-  </div>
+
 
   <div class="field">
-    <%= form.label :address %>
+    <%= form.label :tier %>
     <%= form.text_field :address %>
   </div>
 
   <div class="field">
-    <%= form.label :postcode %>
-    <%= form.number_field :postcode %>
+    <%= form.label :kd %>
+    <%= form.text_field :kd %>
   </div>
+
+   <div class="field">
+    <%= form.label :hd %>
+    <%= form.text_field :hd %>
+  </div>
+  <div class="field">
+    <%= form.label :kill %>
+    <%= form.text_field :die %>
+  </div>
+   <div class="field">
+    <%= form.label :matches %>
+    <%= form.text_field :matches %>
+  </div>
+
+
+
 
   <div class="actions">
     <%= form.submit %>

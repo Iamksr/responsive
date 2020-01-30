@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+<h>GØT々दहशत</h>
+<h>Royal Pass S11</h>
+
+<table>
+  <thead>
+    <tr>
+      <th><h3>Name</h3></th>
+      <th><h3>RP</h3></th>
+     <th><h3>Rank</h3></th>
+      <th colsp1an="6"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @royalpasses.each do |royalpass| %>
+      <tr>
+        <td><p1><%= royalpass.name %></p1></td>
+        <td><p1><%= royalpass.rp %></p1></td>
+        <td><p1><%= royalpass.rnk %></p1></td>
+        <td><%= link_to 'Show', royalpass %></td>
+         <% if current_user.role == "admin" %>
+        <td><%= link_to 'Edit', edit_royalpass_path(royalpass) %></td>
+          <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+ <% if current_user.role == "admin" %>
+<%= link_to 'New Royalpass', new_royalpass_path %>
+  <% end %>
