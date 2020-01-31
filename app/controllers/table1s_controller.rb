@@ -51,7 +51,8 @@ end
       end
     end
   end
-
+def gallery
+end
   # DELETE /table1s/1
   # DELETE /table1s/1.json
   def destroy

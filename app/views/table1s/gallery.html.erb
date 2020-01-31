@@ -1,0 +1,66 @@
+<div id="quad">
+  <figure>
+  <img src="https://scontent.fdel1-3.fna.fbcdn.net/v/t1.0-9/84550782_134598424695362_5081553426270126080_n.jpg?_nc_cat=111&_nc_ohc=TSp7SjOMXu8AX-co5OE&_nc_ht=scontent.fdel1-3.fna&oh=1357f6421ce2d1b1fa382de17a14bdac&oe=5EC62279" alt="rose-red-wine">
+  <figcaption>Best Crate Open</figcaption>
+  </figure>
+  <figure>
+    <img src="https://scontent.fdel1-3.fna.fbcdn.net/v/t1.0-9/83736639_134598391362032_4971225453126746112_n.jpg?_nc_cat=111&_nc_ohc=MfHkaJ2Q9PYAX-uCeZh&_nc_ht=scontent.fdel1-3.fna&oh=bfafbde159ca032bb39c0883204a83d9&oe=5ECBAD3F" alt>
+    <figcaption>Camper on the Top</figcaption>
+  </figure>
+  
+  <figure>
+    <img src="https://scontent.fdel1-4.fna.fbcdn.net/v/t1.0-9/s960x960/83341546_134586128029925_5164813192664186880_o.jpg?_nc_cat=102&_nc_ohc=Exzgkcz11A8AX_rX6nI&_nc_ht=scontent.fdel1-4.fna&oh=57fa6dd8e08cd46c02907c72f50f4794&oe=5E91F8F9" alt>
+    <figcaption>Sorry Shaktimaan</figcaption>
+  </figure>
+  <figure>
+    <img src="https://scontent.fdel1-3.fna.fbcdn.net/v/t1.0-9/s960x960/83464291_134586284696576_4067695352025710592_o.jpg?_nc_cat=106&_nc_ohc=AvBnGMdIL44AX8yxnch&_nc_ht=scontent.fdel1-3.fna&oh=63b96a6221aff4a8bbac1e29a0e5838f&oe=5ED16D75" alt>
+    <figcaption>Help</figcaption>
+  </figure>
+  <figure>
+    <img src="https://scontent.fdel1-2.fna.fbcdn.net/v/t1.0-9/s960x960/83911364_134587418029796_1764504300433702912_o.jpg?_nc_cat=107&_nc_ohc=knf9hAGoNpkAX-61jhN&_nc_ht=scontent.fdel1-2.fna&oh=2d4f194bb386dbd7bda7f46c41b0ab82&oe=5ED43028" alt>
+    <figcaption>White Lobby</figcaption>
+  </figure>
+</div>
+<style type="text/css">
+  body { 
+  font-family: Avenir, sans-serif; margin: 0; 
+  background-color: #121;
+}
+div#quad { 
+  background-color: #000; 
+  font-size: 0; width:100%; 
+  margin: 1px auto;
+  box-shadow: 0 0 12px rgba(0,0,0,0.8);
+}
+div#quad figure { 
+  margin: 0; width: 80%; 
+  height: auto; transition: 1s; 
+  display: inline-block; 
+  position: relative; overflow: hidden; 
+}
+div#quad figure:hover { cursor: pointer; z-index: 4; }
+div#quad figure img { width: 60%; height: auto; }
+div#quad figure:nth-child(1) { transform-origin: top left; }
+div#quad figure:nth-child(2) { transform-origin: top left; }
+div#quad figure:nth-child(3) { transform-origin: top left; }
+div#quad figure:nth-child(4) { transform-origin: top left; }
+div#quad figure:nth-child(5) { transform-origin: top left; }
+div#quad figure figcaption { 
+  margin: 0; opacity: 0; 
+  background: rgba(0,0,0,0.3); 
+  color: #fff; padding: .31rem; 
+  font-size: .7rem; 
+  position: absolute; 
+  bottom: 0; width: 70%;
+  transition: 1s 1s opacity; 
+}
+.expanded { transform: scale(2); z-index: 5;  }
+div#quad figure.expanded figcaption { opacity: 1; }
+div.full figure:not(.expanded) { pointer-events: none; }
+</style>
+<script type="text/javascript">
+  var quadimages = document.querySelectorAll("#quad figure");
+for(i=0; i<quadimages.length; i++) {
+  quadimages[i].addEventListener('click', function(){ this.classList.toggle("expanded"); quad.classList.toggle("full") }); 
+}
+</script>
