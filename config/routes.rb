@@ -7,6 +7,8 @@ Rails.application.routes.draw do
  get 'about' => "table1s#about"
  get 'video' => "royalpasses#video"
   get 'gallery' => "table1s#gallery"
+ get 'upsc' => "welcome#upsc"
+  get 'trick' => "welcome#trick"
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
