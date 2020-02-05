@@ -8,6 +8,7 @@
 
 <div class="container">
        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <%= render "devise/shared/error_messages", resource: resource %>
        <br><br><br><br>
     <div class="card card-login mx-auto text-center bg-dark">
         <div class="card-header mx-auto bg-dark">
@@ -38,7 +39,8 @@
             </form>
         </div>
     </div>
-   <li><%= link_to "Sign Up", new_user_registration_path,class: "btn btn-outline-success float-right login_btn"%></li>
+   <li><%= link_to "Sign Up", new_user_registration_path,class: "btn"%></li>
     <%end%>
 
 </div>
+
