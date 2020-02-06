@@ -5,4 +5,6 @@ class WelcomeController < ApplicationController
   end
   def trick
   end
+  def offers
+  end
 end
