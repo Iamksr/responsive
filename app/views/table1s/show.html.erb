@@ -24,7 +24,5 @@
   <strong>Kills:</strong>
   <%= @table1.die %>
 </p>
- <% if current_user.role == "admin" %>
-<%= link_to 'Edit', edit_table1_path(@table1) %> |
-<%end%>
+ 
 <%= link_to 'Back', table1s_path %>
