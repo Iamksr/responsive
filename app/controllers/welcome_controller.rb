@@ -7,4 +7,6 @@ class WelcomeController < ApplicationController
   end
   def offers
   end
+  def open
+  end
 end

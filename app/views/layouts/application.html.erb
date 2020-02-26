@@ -2,8 +2,8 @@
   <html class="fontawesome-i2svg-active fontawesome-i2svg-complete">
     <head>
       <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <!--  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
       <title> Mobile</title>
       <!-- Bootstrap CSS CDN -->
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
@@ -16,7 +16,7 @@
     <body>
       <div class="wrapper">
         <!-- Sidebar  -->
-        <% if user_signed_in? %>
+        <%# if user_signed_in? %>
         <nav id="sidebar" class="">
           <div class="sidebar-header">
             <h3><a href="/">Aiden</a></h3>
@@ -66,7 +66,7 @@
           </ul>
           <ul class="list-unstyled CTAs">
             <li>
-              <a href="/video" class="download">Watch Videos</a>
+              <a href="/admin" class="download">Admin Login</a>
             </li>
             <li>
               <a href="/" class="article">Back to Site</a>
@@ -102,14 +102,14 @@
                   <li class="nav-item">
                     <a class="nav-link" href="/video">Watch Videos</a>
                   </li>
-                  <li class="nav-item">
+                  <!-- <li class="nav-item">
                     <a class="nav-link" href="/users/sign_out">Log Out</a>
-                  </li>
+                  </li> -->
                 </ul>
               </div>
             </div>
           </nav>
-          <%end%>
+          <%#end%>
           <%= yield %>
         </div>
       </div>
