@@ -1,6 +1,6 @@
 ActiveAdmin.register Table1 do
     # menu false
-    actions :all, :except => [:show, :new]
+    actions :all, :except => [:show]
  permit_params :name, :matches, :kd, :hd, :die
 
  index :title => 'Tencent Dashboard' do 
