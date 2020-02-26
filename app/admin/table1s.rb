@@ -1,5 +1,6 @@
 ActiveAdmin.register Table1 do
-
+    # menu false
+    actions :all, :except => [:show, :new]
  permit_params :name, :matches, :kd, :hd, :die
 
  index :title => 'Tencent Dashboard' do 
@@ -7,6 +8,7 @@ ActiveAdmin.register Table1 do
       id_column
       column "Players Name" , :name                     
       column "Matches", :matches 
+      column "Last Update", :updated_at
       column "K/D", :kd   
       column "Headshot", :hd  
       column "Kills", :die  

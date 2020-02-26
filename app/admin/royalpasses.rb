@@ -1,4 +1,5 @@
 ActiveAdmin.register Royalpass do
+  actions :all, :except => [:show, :new]
   permit_params :name, :rp, :pts, :rnk
 
 index :title => 'Royalpass Dashboard' do 
